@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file alias="images/button-pressed">resources/button-pressed.png</file>
+        <file alias="images/button-inactive">resources/button-inactive.png</file>
+        <file alias="images/button-active">resources/button-active.png</file>
+        <file alias="images/icon">resources/icon492.png</file>
+    </qresource>
+</RCC>

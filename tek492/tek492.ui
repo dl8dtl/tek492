@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tek492</class>
+ <widget class="QMainWindow" name="Tek492">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1028</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tek492</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="memConfig">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>170</y>
+      <width>160</width>
+      <height>180</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Memory configuration switches&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Must match the memory configuration chosen on the analyzer, in order to restore this configuration after picking up the samples from memory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="title">
+     <string>Memory configuration</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QRadioButton" name="viewA">
+       <property name="text">
+        <string notr="true">VIEW A</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="viewB">
+       <property name="text">
+        <string notr="true">VIEW B</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="viewB_minus_saveA">
+       <property name="text">
+        <string notr="true">B - SAVE A</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="saveA">
+       <property name="text">
+        <string notr="true">SAVE A</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="maxHold">
+       <property name="text">
+        <string>MAX HOLD</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="videoFilter">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>380</y>
+      <width>160</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Video filter</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QRadioButton" name="vfNone">
+       <property name="text">
+        <string>None</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="vfWide">
+       <property name="text">
+        <string>Wide</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="vfNarrow">
+       <property name="text">
+        <string>Narrow</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="radioBW">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>300</y>
+      <width>160</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Radio Bandwidth</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QRadioButton" name="rbw1M">
+       <property name="text">
+        <string>1 MHz</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbw100k">
+       <property name="text">
+        <string>100 kHz</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbw10k">
+       <property name="text">
+        <string>10 kHz</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbw1k">
+       <property name="text">
+        <string>1 kHz</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbw100">
+       <property name="text">
+        <string>100 Hz</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="refLevel">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>170</y>
+      <width>160</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Reference level</string>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QwtWheel" name="refLevelWheel">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h3&gt;Reference level setting&lt;/h3&gt;&lt;p&gt;Auto-adjusts attenuator setting, too.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="value">
+        <double>30.000000000000000</double>
+       </property>
+       <property name="minimum">
+        <double>-120.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>30.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>10.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QwtTextLabel" name="refLevValue">
+         <property name="font">
+          <font>
+           <family>Lucida</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: white</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="margin">
+          <number>3</number>
+         </property>
+         <property name="plainText">
+          <string>-XXX dBm</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="acquire">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>68</x>
+      <y>380</y>
+      <width>162</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ACQUIRE</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="centerFrequency">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>280</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h3&gt;Center Frequency Tuning&lt;/h3&gt;&lt;p&gt;Either turn the knob, or the arrow buttons to the right, or enter the value directly.&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;</string>
+    </property>
+    <property name="title">
+     <string>Center frequency</string>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QDial" name="frequencyDial">
+       <property name="wrapping">
+        <bool>true</bool>
+       </property>
+       <property name="notchTarget">
+        <double>10.000000000000000</double>
+       </property>
+       <property name="notchesVisible">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="frequencySpinBox">
+       <property name="font">
+        <font>
+         <family>Lucida</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <double>21000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>MHz</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="attenuation">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>300</y>
+      <width>160</width>
+      <height>230</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Attenuation</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <widget class="QRadioButton" name="atten60">
+       <property name="text">
+        <string>60 dB</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="atten50">
+       <property name="text">
+        <string>50 dB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="atten40">
+       <property name="text">
+        <string>40 dB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="atten30">
+       <property name="text">
+        <string>30 dB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="atten20">
+       <property name="text">
+        <string>20 dB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="atten10">
+       <property name="text">
+        <string>10 dB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="atten0">
+       <property name="text">
+        <string>0 dB</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QwtPlot" name="plotArea">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>20</y>
+      <width>390</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="canvasBackground">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>24</red>
+       <green>100</green>
+       <blue>87</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>170</y>
+      <width>160</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Span /div</string>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QwtWheel" name="spanWheel">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h3&gt;Span adjustment&lt;/h3&gt;&lt;p&gt;Auto-adjusts radio bandwidth, too.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="value">
+        <double>18.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>18.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QwtTextLabel" name="spanValue">
+         <property name="font">
+          <font>
+           <family>Lucida</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: white</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="margin">
+          <number>3</number>
+         </property>
+         <property name="plainText">
+          <string>FULL MHZ</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="bandBox">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>260</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Band</string>
+    </property>
+    <widget class="QComboBox" name="fBand">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>220</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="markerA">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>180</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Marker A</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="2">
+      <widget class="QwtWheel" name="mAWheel">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QCheckBox" name="mAEnabled">
+       <property name="toolTip">
+        <string>Need to acquire data first.</string>
+       </property>
+       <property name="text">
+        <string>Enabled</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="markerB">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>430</y>
+      <width>180</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Marker B</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="2">
+      <widget class="QwtWheel" name="mBWheel">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QCheckBox" name="mBEnabled">
+       <property name="toolTip">
+        <string>Need to acquire data first.</string>
+       </property>
+       <property name="text">
+        <string>Enabled</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1028</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionConnect"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionUsage"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open ...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open file</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save ...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save to file</string>
+   </property>
+  </action>
+  <action name="actionConnect">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect to USB device</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About ...</string>
+   </property>
+  </action>
+  <action name="actionUsage">
+   <property name="text">
+    <string>Usage ...</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Print ...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QwtPlot</class>
+   <extends>QFrame</extends>
+   <header>qwt_plot.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QwtWheel</class>
+   <extends>QWidget</extends>
+   <header>qwt_wheel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QwtTextLabel</class>
+   <extends>QFrame</extends>
+   <header>qwt_text_label.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>Tek492</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

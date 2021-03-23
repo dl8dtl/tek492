@@ -1,0 +1,2 @@
+# USB492: VID 0x3141, PID 0x0005
+SUBSYSTEM=="usb", ATTR{idVendor}=="3141", ATTR{idProduct}=="0005", GROUP="plugdev", MODE="0660"
