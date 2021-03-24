@@ -20,9 +20,24 @@ qmake tek492.pro
 make
 ```
 
+It is also possible to use a separate build directory:
+
+```
+mkdir build
+cd build
+qmake ../tek492.pro
+make
+```
+
 or build with qtcreator
 
 # Usage
+
+On Linux systems, install `etc_udev_rules.d/42-usb492.rules` into
+`/etc/udev/rules.d`, and run `sudo udevadm control --reload` before
+connecting the USB adapter. On other OSes, ensure in other ways the
+user who wants to run the tool got appropriate permissions granted to
+access the USB device node.
 
 Connect ciruitben's USB adapter to the Tek492 analyzer and your computer
 (see "usb_492" subdirectory).
