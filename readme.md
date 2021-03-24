@@ -1,12 +1,33 @@
 Simple Qt/qwt application to read out and display data from a Tek492
 spectrum analyzer.
 
-Usage:
+# Requirements
+
+```
+sudo apt-get install build-essential qt5-default libqwt-qt5-dev libqt5svg5-dev
+```
+
+## optional
+
+```
+sudo apt-get install qtcreator
+```
+
+# Build
+
+```
+qmake tek492.pro
+make
+```
+
+or build with qtcreator
+
+# Usage
 
 Connect ciruitben's USB adapter to the Tek492 analyzer and your computer
 (see "usb_492" subdirectory).
 
-Compile and start Qt application.
+Start Qt application.
 
 Choose File -> Connect to connect to the adapter.
 
