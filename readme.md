@@ -4,7 +4,7 @@ spectrum analyzer.
 # Requirements
 
 ```
-sudo apt-get install build-essential qt5-default libqwt-qt5-dev libqt5svg5-dev
+sudo apt-get install build-essential qt5-default libqwt-qt5-dev libqt5svg5-dev libusb-dev
 ```
 
 ## optional
